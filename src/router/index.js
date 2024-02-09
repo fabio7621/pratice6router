@@ -15,27 +15,22 @@ const router = createRouter({
 				},
 				{
 					path: "about",
-					name: "about",
 					component: () => import("../views/AboutView.vue"),
 				},
 				{
 					path: "cart",
-					name: "cart",
 					component: () => import("../views/CartView.vue"),
 				},
 				{
 					path: "order",
-					name: "order",
 					component: () => import("../views/OrderView.vue"),
 				},
 				{
 					path: "product",
-					name: "product",
 					component: () => import("../views/ProductView.vue"),
 				},
 				{
 					path: "checkout",
-					name: "checkout",
 					component: () => import("../views/CheckOutView.vue"),
 				},
 			],
@@ -43,7 +38,16 @@ const router = createRouter({
 		{
 			path: "/admin",
 			component: () => import("../views/dashbord/DashBord.vue"),
-			children: [],
+			children: [
+				{
+					path: "products",
+					component: () => import("../views/dashbord/ProductView.vue"),
+				},
+				{
+					path: "orderlist",
+					component: () => import("../views/dashbord/OrderView.vue"),
+				},
+			],
 		},
 	],
 });
