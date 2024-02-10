@@ -6,7 +6,8 @@
 		<RouterLink to="/product">產品列表</RouterLink> |
 		<RouterLink to="/cart">訂單列表</RouterLink> |
 		<RouterLink to="/checkout">結帳</RouterLink>
-		<RouterLink to="/admin">後台</RouterLink>
+		<RouterLink to="/admin">後台</RouterLink> |
+		<RouterLink to="/login">登入</RouterLink>
 	</nav>
 	<router-view></router-view>
 </template>
